@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceBlock name="top.links" remove='true'>
+        </referenceBlock>
+        <referenceBlock name="register-link" remove="true" />           <!--for Create Account Link-->
+                        <!--for Sign In Link  -->
+        <referenceBlock name="wish-list-link" remove="true" />          <!--for WishList Link-->
+        <referenceBlock name="my-account-link" remove="true" /> 
+        <referenceBlock name="header" remove="true"/>
+        <move element="authorization-link-login" destination="header-wrapper" after="minicart"/>
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="page-footer"  template="Magento_Theme::pagefooter.phtml" />
+            <referenceBlock name="store_switcher" remove="true"/>
+            <referenceBlock name="footer_links" remove="true"/>
+            <referenceBlock name="copyright" remove="true"/>
+        </referenceContainer>
+    </body>
+</page>

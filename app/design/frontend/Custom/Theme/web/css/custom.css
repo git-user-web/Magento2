@@ -1,0 +1,131 @@
+.navigation ul {
+    position: relative;
+}
+.navigation li.level0 {
+    position: static;
+}
+.navigation ul {
+    width: 100% !important;
+}
+span.sub-span {
+    margin-left: 10px;
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
+}
+.div-right {
+    float: left;
+    width: 14%;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.div-left.ui-menu-item {
+    /*float: left;*/
+    /*width: 50%;*/
+}
+.nav-wrapper {
+    overflow:auto;
+}
+.first-box {
+    width: auto;
+    float: left;
+    height: auto;
+    margin-left: 40px;
+}
+.second-box {
+    width: auto;
+    height: auto;
+    float: left;
+    padding-left: -2px;
+    margin-left: 50px;
+}
+span.text-block {
+    display: block;
+    text-align: center;
+}
+li.level1.category-item.first {
+    margin-top: 15px;
+}
+.category-sidebar {
+    border: black solid 1px;
+    padding-left: 12px;
+    padding-top: 10px;
+}
+.category-wrap ol.items {
+    padding-left: 30px;
+}
+.category-wrap dl {
+    padding: 18px;
+}
+.category-wrap dt {
+    margin-bottom: 10px;
+}
+.block.block-compare {
+    border: solid 1px;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 7px;
+}
+.block.block-wishlist {
+    border: solid 1px;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 7px;
+}
+.block-compare .actions-toolbar {
+    margin: 17px 0 0;
+}
+.actions-toolbar {
+    padding: 15px;
+}
+ul.level1 li.level2 {
+    position: auto;
+    /*float: left;*/
+}
+@media screen and (max-width: 768px) {
+    .div-right, .sub-span, .all-category {
+        visibility: hidden;
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .navigation .parent .level-top:after {
+        content: "+";
+    }
+    .navigation .parent .level-top.ui-state-active:after {
+        content: "-";
+    }
+}
+@media (min-width: 768px) {
+    .navigation li.level1 {
+        position: relative;
+        float: left;
+        margin-right: 28px !important;
+        margin-left: 2px !important;
+        border-bottom: 1px solid black;
+    }
+    .section-item-content .navigation .level0 .submenu .submenu {
+        top: 52px !important;
+        left: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: none;
+        display: block !important;
+    }
+    .navigation .level0 .submenu li.parent > a > .ui-menu-icon:after {
+        content: none !important;
+    }
+    .navigation .level0 .submenu .level1 {
+        width: 14%;
+        margin: 15px !important;
+    }
+    .section-item-content .navigation .level0 .submenu {
+        left: 0 !important;
+        min-height: 300px !important;
+        border: none;
+        padding: 0 1000px;
+        margin: 0 -1000px !important;
+    }
+    .div-left.sub-section.ui-menu-item {
+        float: left;
+    }
+}

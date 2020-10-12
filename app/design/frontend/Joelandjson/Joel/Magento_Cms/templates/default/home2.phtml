@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.columnj {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.columnj.index {
+    height: 250px;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #202020;
+  overflow: hidden;
+  width: 92%;
+  height: 0;
+  transition: .5s ease;
+  opacity: 0.8;
+  margin-left: 3%;
+  margin-bottom: 6%;
+}
+.overlayone {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #202020;
+  overflow: hidden;
+  width: 92%;
+  height: 0;
+  transition: .5s ease;
+  opacity: 0.8;
+  margin-left: 3%;
+  margin-bottom: 10%;
+}
+.overlaytwo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #202020;
+  overflow: hidden;
+  width: 94%;
+  height: 0;
+  transition: .5s ease;
+  opacity: 0.8;
+  margin-left: 3%;
+  margin-bottom: 4%;
+}
+
+
+
+
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<div class="row main over">
+  <h2 style="text-align: center;color: #56636c">OUR MOST LOVED PRODUCTS</h2>
+  <div class="columnj main one" >
+    <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/img1.jpg'); ?>" alt="Avatar" class="imagesix">
+    <div class="overlaytwo">
+        <div class="text">Hello World</div>
+      </div>
+  </div>
+  <div class="columnj main two" >
+    <div class="row main three" >
+      <div class="columnj index one" >
+       <img  src="<?php echo $this->getViewFileUrl('Magento_Cms::images/img2.jpeg'); ?>" alt="Avatar" class="imageseven">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+      <div class="columnj index1" >
+       <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/img3.jpeg'); ?>" alt="Avatar" class="image11">
+       <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+      <div class="columnj index1" >
+       <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/img4.jpeg'); ?>" alt="Avatar" class="image12">
+       <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+    <div class="row main four" >
+      <div class="columnj index two" >
+       <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/img5.jpeg'); ?>" alt="Avatar" class="imag8">
+       <div class="overlayone">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+      <div class="columnj index1" >
+       <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/img6.jpeg'); ?>" alt="Avatar" class="imag9">
+       <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+      <div class="columnj index1" >
+       <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/img7.jpeg'); ?>" alt="Avatar" class="imag10">
+       <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column footer one" >
+    <?php
+      echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner_before_footer_left')
+      ->toHtml();
+    ?>
+  </div>
+  <div class="column footer">
+    <?php
+      echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner_before_footer_right')
+      ->toHtml();
+    ?>
+  </div>
+</div>
+
+</body>
+</html>

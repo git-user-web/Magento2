@@ -1,0 +1,48 @@
+<?php
+/**
+ * GiaPhuGroup Co., Ltd.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GiaPhuGroup.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.giaphugroup.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    PHPCuong
+ * @package     PHPCuong_BannerSlider
+ * @copyright   Copyright (c) 2017-2019 GiaPhuGroup Co., Ltd. All rights reserved. (http://www.giaphugroup.com/)
+ * @license     https://www.giaphugroup.com/LICENSE.txt
+ */
+
+/** @var \PHPCuong\BannerSlider\Block\Widget\BannerSlider $block */
+$banners = $block->getBanners();
+?>
+<?php if ($banners->getSize()): ?>
+    <?php foreach ($banners as $banner): ?>
+        <?php if ($banner->getPosition()==0){
+            $var='none';
+            } ?>
+            <?php if ($banner->getPosition()==1){
+                $var='banner-subtext-left';
+             } ?>
+             <?php if ($banner->getPosition()==2){
+                $var='banner-subtext-right';
+             } ?>   
+            <?php if ($banner->getPosition()==3){
+                $var='banner-subtext-center';
+            } ?>
+        <div>
+            <img style="height:500px;width: 1575px;" src="<?= $banner->getImageUrl(); ?>">
+            <div class="<?= $var ?>">
+               <h1 class="title title--large" style="color: #333333; font-size: 35px; margin: 0; padding: 0; letter-spacing: 1.5px;"><a style="color: #333333; text-decoration: none;" tabindex="-1"><?= $banner->getName(); ?></a></h1>
+               <a style="color: #333333; text-decoration: none;" tabindex="-1"><i><?= $banner->getSubName(); ?></i></a></p>
+               <p style="color: #ffffff; font-family: gill-sans, 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 12px 15px; border: solid 1px #333333; font-size: 14px; display: inline-block; margin-top: 20px; border-radius: 3px;"><a style="color: #333333; text-decoration: none;" href="<?= ($banner->getUrl()) ? $banner->getUrl() : '#'; ?>" tabindex="-1">BROWSE THE RANGE</a></p>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>
